@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/cypress-io/cypress-test-tty/issues"
   },
-  "homepage": "https://github.com/cypress-io/cypress-test-tty#readme"
+  "homepage": "https://github.com/cypress-io/cypress-test-tty#readme",
+  "dependencies": {
+    "chalk": "^2.3.0"
+  }
 }
