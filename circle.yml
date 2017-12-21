@@ -1,4 +1,8 @@
 version: 2
+
+environment:
+  term: XTERM
+
 jobs:
   build:
     working_directory: ~/app
