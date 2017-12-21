@@ -1,6 +1,8 @@
 const tty = require('tty')
 const chalk = require('chalk')
 
+console.log('process.env.TERM is set to:', process.env.TERM)
+
 console.log('stdout is tty?', process.stdout.isTTY, tty.isatty(1))
 console.log('stderr is tty?', process.stderr.isTTY, tty.isatty(2))
 
