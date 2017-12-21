@@ -6,7 +6,7 @@ jobs:
     docker:
       - image: node:6
     environment:
-      - term: XTERM
+      - TERM: XTERM
     steps:
       - checkout
       - run: npm install
