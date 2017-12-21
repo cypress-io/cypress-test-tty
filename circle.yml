@@ -1,3 +1,10 @@
-machine:
-  node:
-    version: 6.5.0
+version: 2
+jobs:
+  build:
+    working_directory: ~/app
+    docker:
+      - image: node/6
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm test
