@@ -1,13 +1,12 @@
 version: 2
 
-environment:
-  term: XTERM
-
 jobs:
   build:
     working_directory: ~/app
     docker:
       - image: node:6
+    environment:
+      term: XTERM
     steps:
       - checkout
       - run: npm install
