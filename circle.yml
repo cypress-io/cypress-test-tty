@@ -5,8 +5,8 @@ jobs:
     working_directory: ~/app
     docker:
       - image: node:6
-      environment:
-        term: XTERM
+        environment:
+          term: XTERM
     steps:
       - checkout
       - run: npm install
