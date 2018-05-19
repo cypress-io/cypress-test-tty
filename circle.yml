@@ -4,7 +4,7 @@ jobs:
   build:
     working_directory: ~/app
     docker:
-      - image: node:6
+      - image: node:8
     environment:
       - TERM: XTERM
     steps:

@@ -1,0 +1,10 @@
+environment:
+  nodejs_version: "8.2.1"
+
+install:
+  - npm install
+
+test_script:
+  - npm test
+
+build: off
