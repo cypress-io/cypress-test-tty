@@ -11,8 +11,6 @@ jobs:
       - checkout
       - run: npm install
       - run: npm test
-      - run: tput cols
-      - run: tput lines
       - run: stty size
       - run: stty cols 100
       - run: node size.js
