@@ -14,4 +14,5 @@ jobs:
       - run: stty size
       - run: stty cols 100
       - run: stty size
+      - run: stty cols 100 && stty size
       - run: node size.js
