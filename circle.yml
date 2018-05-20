@@ -11,7 +11,7 @@ jobs:
       - TERM: XTERM
     steps:
       - checkout
-      - run: npm install
-      - run: npm test
       - run: stty size
+      - run: npm install
+      - run: stty cols 100 && npm test
       - run: node size.js
