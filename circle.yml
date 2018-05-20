@@ -13,5 +13,5 @@ jobs:
       - checkout
       - run: stty size
       - run: npm install
-      - run: stty cols 100 && npm test
+      - run: stty cols 100 && npm test ## this causes process.stdout.columns to be set correctly
       - run: node size.js
