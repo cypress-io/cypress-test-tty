@@ -29,9 +29,10 @@ console.log(symbols.warning, 'warning')
 
 debug('some debug output %o', { foo: 'bar', baz: true })
 
-console.log('stdout columns?', process.stdout.columns)
-debug('termSize %o', termSize())
+console.log('process.stdout columns?', process.stdout.columns)
+console.log('process.stdout rows?', process.stdout.rows)
 debug('process.env.COLUMNS=', process.env.COLUMNS)
 debug('process.env.LINES=', process.env.LINES)
+debug('termSize %o', termSize())
 
 process.exit()
