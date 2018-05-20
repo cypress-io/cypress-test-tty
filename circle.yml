@@ -13,4 +13,5 @@ jobs:
       - run: npm test
       - run: stty size
       - run: stty cols 100
+      - run: stty size
       - run: node size.js
