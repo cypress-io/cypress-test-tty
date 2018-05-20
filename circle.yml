@@ -6,13 +6,12 @@ jobs:
     docker:
       - image: node:8
     environment:
+      - COLUMNS: 100
+      - LINES: 24
       - TERM: XTERM
     steps:
       - checkout
       - run: npm install
-      - run: stty cols 100 && npm test
+      - run: npm test
       - run: stty size
-      - run: stty cols 100
-      - run: stty size
-      - run: stty cols 100 && stty size
-      - run: stty cols 100 && node size.js
+      - run: node size.js
