@@ -1,7 +1,10 @@
+process.env.DEBUG='stdout-stderr-testing'
+
 const tty = require('tty')
 const supportsColor = require('supports-color')
 const symbols = require('log-symbols')
 const debug = require('debug')('stdout-stderr-testing')
+const termSize = require('term-size')
 
 console.log('********** INSIDE CHILD *************')
 
@@ -23,5 +26,12 @@ console.log(symbols.info, 'info')
 console.log(symbols.success, 'success')
 console.log(symbols.error, 'error')
 console.log(symbols.warning, 'warning')
+
+debug('some debug output %o', { foo: 'bar', baz: true })
+
+console.log('stdout columns?', process.stdout.columns)
+debug('termSize %o', termSize())
+debug('process.env.COLUMNS=', process.env.COLUMNS)
+debug('process.env.LINES=', process.env.LINES)
 
 process.exit()

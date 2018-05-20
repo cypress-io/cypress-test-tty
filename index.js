@@ -5,6 +5,7 @@ const execa = require('execa')
 const debug = require('debug')('stdout-stderr-testing')
 const supportsColor = require('supports-color')
 const symbols = require('log-symbols')
+const termSize = require('term-size')
 
 console.log("does it display secret env vars?", process.env.SECRET_ENV_VAR)
 
@@ -15,6 +16,11 @@ console.log("electron.version=", process.versions.electron)
 console.log('process.env.FORCE_COLOR=', process.env.FORCE_COLOR)
 
 debug('some debug output %o', { foo: 'bar', baz: true })
+
+console.log('stdout columns?', process.stdout.columns)
+debug('termSize %o', termSize())
+debug('process.env.COLUMNS=', process.env.COLUMNS)
+debug('process.env.LINES=', process.env.LINES)
 
 console.log('i am stdout 1')
 console.error('i am stderror 1')
