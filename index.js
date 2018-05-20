@@ -6,6 +6,8 @@ const debug = require('debug')('stdout-stderr-testing')
 const supportsColor = require('supports-color')
 const symbols = require('log-symbols')
 
+console.log("does it display secret env vars?", process.env.SECRET_ENV_VAR)
+
 console.log('process.env.TERM is set to:', process.env.TERM)
 console.log("process.type=", process.type)
 console.log("electron.version=", process.versions.electron)
