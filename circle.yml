@@ -10,9 +10,9 @@ jobs:
     steps:
       - checkout
       - run: npm install
-      - run: npm test
+      - run: stty cols 100 && npm test
       - run: stty size
       - run: stty cols 100
       - run: stty size
       - run: stty cols 100 && stty size
-      - run: node size.js
+      - run: stty cols 100 && node size.js
